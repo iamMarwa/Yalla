@@ -290,55 +290,55 @@ class joinEvent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-      //   Padding(
-      //     padding: const EdgeInsets.only(left: 8.0),
-      //     child: Container(
-      //         height: 35.0,
-      //         child: ListView.builder(
-      //           scrollDirection: Axis.horizontal,
-      //           padding: EdgeInsets.only(top: 0.0, left: 5.0, right: 5.0),
-      //           itemCount: list.length > 3 ? 3 : list.length,
-      //           itemBuilder: (context, i) {
-      //             String _title = list[i].data()['name'].toString();
-      //             String _npm = list[i].data()['country'].toString();
-      //             String _img = list[i].data()['photoProfile'].toString();
+        Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: Container(
+              height: 35.0,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.only(top: 0.0, left: 5.0, right: 5.0),
+                itemCount: list.length > 3 ? 3 : list.length,
+                itemBuilder: (context, i) {
+                  String _title = list[i].data()['name'].toString();
+                  String _npm = list[i].data()['country'].toString();
+                  String _img = list[i].data()['photoProfile'].toString();
 
-      //             return Row(
-      //               children: <Widget>[
-      //                 Padding(
-      //                   padding: const EdgeInsets.only(left: 2.0),
-      //                   child: Container(
-      //                     height: 35.0,
-      //                     width: 35.0,
-      //                     decoration: BoxDecoration(
-      //                         borderRadius:
-      //                             BorderRadius.all(Radius.circular(70.0)),
-      //                         image: DecorationImage(
-      //                             image: NetworkImage(_img),
-      //                             fit: BoxFit.cover)),
-      //                   ),
-      //                 ),
-      //               ],
-      //             );
-      //           },
-      //         )),
-      //   ),
-      //   Padding(
-      //     padding: const EdgeInsets.only(left: 135.0),
-      //     child: Container(
-      //       height: 38.0,
-      //       width: 38.0,
-      //       decoration: BoxDecoration(
-      //           border: Border.all(color: Colors.deepPurpleAccent, width: 1.0),
-      //           borderRadius: BorderRadius.all(Radius.circular(60.0))),
-      //       child: Center(
-      //         child: Text(
-      //           "+" + list.length.toString(),
-      //           style: TextStyle(fontFamily: "Popins"),
-      //         ),
-      //       ),
-      //     ),
-      //   )
+                  return Row(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(left: 2.0),
+                        child: Container(
+                          height: 35.0,
+                          width: 35.0,
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(70.0)),
+                              image: DecorationImage(
+                                  image: NetworkImage(_img),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              )),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 135.0),
+          child: Container(
+            height: 38.0,
+            width: 38.0,
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.deepPurpleAccent, width: 1.0),
+                borderRadius: BorderRadius.all(Radius.circular(60.0))),
+            child: Center(
+              child: Text(
+                "+" + list.length.toString(),
+                style: TextStyle(fontFamily: "Popins"),
+              ),
+            ),
+          ),
+        )
        ],
     );
   }
@@ -346,95 +346,95 @@ class joinEvent extends StatelessWidget {
 
 Widget cardHeaderLoading(BuildContext context) {
   return Padding(
-    // padding: const EdgeInsets.only(top: 15.0),
-    // child: Container(
-    //   height: 390.0,
-    //   width: double.infinity,
-    //   decoration: BoxDecoration(
-    //       borderRadius: BorderRadius.all(Radius.circular(10.0)),
-    //       color: Colors.grey[300],
-    //       boxShadow: [
-    //         BoxShadow(
-    //             color: Colors.black12.withOpacity(0.1),
-    //             spreadRadius: 0.2,
-    //             blurRadius: 0.5)
-    //       ]),
-    //   child: Shimmer.fromColors(
-    //     baseColor: Colors.black38,
-    //     highlightColor: Colors.white,
-    //     child: Stack(
-    //       children: <Widget>[
-    //         Padding(
-    //           padding: EdgeInsets.only(top: 40.0),
-    //           child: Container(
-    //             height: 210.0,
-    //             width: 180.0,
-    //             decoration: BoxDecoration(color: Colors.black12, boxShadow: [
-    //               BoxShadow(
-    //                   color: Colors.black12.withOpacity(0.1),
-    //                   spreadRadius: 0.2,
-    //                   blurRadius: 0.5)
-    //             ]),
-    //             child: Padding(
-    //               padding: const EdgeInsets.only(top: 30.0, left: 10.0),
-    //               child: Column(
-    //                 mainAxisAlignment: MainAxisAlignment.start,
-    //                 crossAxisAlignment: CrossAxisAlignment.start,
-    //                 children: <Widget>[
-    //                   Container(
-    //                     height: 18.0,
-    //                     width: 130.0,
-    //                     color: Colors.black45,
-    //                   ),
-    //                   SizedBox(
-    //                     height: 13.0,
-    //                   ),
-    //                   Container(
-    //                     height: 15.0,
-    //                     width: 105.0,
-    //                     color: Colors.black45,
-    //                   ),
-    //                   SizedBox(
-    //                     height: 13.0,
-    //                   ),
-    //                   Container(
-    //                     height: 15.0,
-    //                     width: 105.0,
-    //                     color: Colors.black45,
-    //                   ),
-    //                   SizedBox(
-    //                     height: 24.0,
-    //                   ),
-    //                   Row(
-    //                     children: <Widget>[
-    //                       CircleAvatar(
-    //                         radius: 20.0,
-    //                         backgroundColor: Colors.black45,
-    //                       ),
-    //                       SizedBox(
-    //                         width: 10.0,
-    //                       ),
-    //                       CircleAvatar(
-    //                         radius: 20.0,
-    //                         backgroundColor: Colors.black45,
-    //                       ),
-    //                       SizedBox(
-    //                         width: 10.0,
-    //                       ),
-    //                       CircleAvatar(
-    //                         radius: 20.0,
-    //                         backgroundColor: Colors.black45,
-    //                       )
-    //                     ],
-    //                   )
-    //                 ],
-    //               ),
-    //             ),
-    //           ),
-    //         ),
-    //       ],
-    //     ),
-    //   ),
-    // ),
+    padding: const EdgeInsets.only(top: 15.0),
+    child: Container(
+      height: 390.0,
+      width: double.infinity,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+          color: Colors.grey[300],
+          boxShadow: [
+            BoxShadow(
+                color: Colors.black12.withOpacity(0.1),
+                spreadRadius: 0.2,
+                blurRadius: 0.5)
+          ]),
+      child: Shimmer.fromColors(
+        baseColor: Colors.black38,
+        highlightColor: Colors.white,
+        child: Stack(
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(top: 40.0),
+              child: Container(
+                height: 210.0,
+                width: 180.0,
+                decoration: BoxDecoration(color: Colors.black12, boxShadow: [
+                  BoxShadow(
+                      color: Colors.black12.withOpacity(0.1),
+                      spreadRadius: 0.2,
+                      blurRadius: 0.5)
+                ]),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 30.0, left: 10.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Container(
+                        height: 18.0,
+                        width: 130.0,
+                        color: Colors.black45,
+                      ),
+                      SizedBox(
+                        height: 13.0,
+                      ),
+                      Container(
+                        height: 15.0,
+                        width: 105.0,
+                        color: Colors.black45,
+                      ),
+                      SizedBox(
+                        height: 13.0,
+                      ),
+                      Container(
+                        height: 15.0,
+                        width: 105.0,
+                        color: Colors.black45,
+                      ),
+                      SizedBox(
+                        height: 24.0,
+                      ),
+                      Row(
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: 20.0,
+                            backgroundColor: Colors.black45,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          CircleAvatar(
+                            radius: 20.0,
+                            backgroundColor: Colors.black45,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          CircleAvatar(
+                            radius: 20.0,
+                            backgroundColor: Colors.black45,
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
   );
 }
