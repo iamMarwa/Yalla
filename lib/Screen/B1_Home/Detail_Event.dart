@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:giffy_dialog/giffy_dialog.dart';
 import 'package:yalla_activities/Screen/B1_Home/Home.dart';
@@ -52,7 +55,11 @@ class _newsListDetailState extends State<newsHeaderListDetail> {
   String _join = "Join & pay";
   FirebaseFirestore _firebaseFirestore=     FirebaseFirestore.instance;
   FireStoreJoinEvent _fireStoreJoinEvent=FireStoreJoinEvent();
+ String _chars;
+Random _rnd = Random();
 
+String getRandomString(int length) => String.fromCharCodes(Iterable.generate(
+    length, (_) => _chars.codeUnitAt(_rnd.nextInt(_chars.length))));
   void _getData() {
     // StreamBuilder(
     //   stream:   _firebaseFirestore
@@ -107,6 +114,7 @@ class _newsListDetailState extends State<newsHeaderListDetail> {
 
   @override
   void initState() {
+    _chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
    _checkFirst();
   _getData();
    _nama=currentUserModel.name;
@@ -167,9 +175,9 @@ class _newsListDetailState extends State<newsHeaderListDetail> {
           "type": widget.type
         });
       });
+      currentUserIdconst=widget.userId;
       Navigator.push(
-            context, MaterialPageRoute(builder: (context) => new 
-PayScreen()
+            context, MaterialPageRoute(builder: (context) => new PayScreen()
             ));
 
     }
@@ -232,7 +240,7 @@ PayScreen()
                         //    return Container();
                         //   },
                         // ),
-                        joinEventData.length==0? new Text("Loading"):joinEvent(list:joinEventData,),
+                        joinEventData.length==0? new Text(""):joinEvent(list:joinEventData,),
                         Padding(
                           padding: EdgeInsets.only(top: 30.0, left: 20.0),
                           child: Text(
@@ -485,7 +493,24 @@ PayScreen()
                         ),
                         SizedBox(
                           height: 100.0,
-                        )
+                        ),
+                         _join.trim=="Joined".trim?
+                        Padding(padding: EdgeInsets.all(12),
+                        child:
+                        
+                         Container(
+                    width: 280,
+                    child:
+                    QrImage(
+  data: getRandomString(5),
+  version: QrVersions.auto,
+  size: 320,
+  gapless: false,
+)
+                    // qrFutureBuilder,
+                  ),
+                        ):Container()
+                        
                       ])),
                 ],
               ),

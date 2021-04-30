@@ -61,7 +61,7 @@ class _QrCodeScreenState extends State<QrCodeScreen> {
             onPressed: () {
                                                     Navigator.push(
             context, MaterialPageRoute(builder: (context) => new 
-        ChoosePalceScreen()
+        ChoosePalceScreen(currentUserId: currentUserIdconst)
             )
                                            );
                                           

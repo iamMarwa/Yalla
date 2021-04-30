@@ -14,7 +14,7 @@ Color mainTextColor = jungleGreen;
 Color subTextColor = boulder;
 Color dividerColor = alto;
 
-  String currentUserId='';
+  String currentUserIdconst='';
   UserModel currentUserModel;
 const String squareLocationId = "REPLACE_ME";
 const String applePayMerchantId = "REPLACE_ME";
