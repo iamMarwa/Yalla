@@ -107,8 +107,8 @@ class _SplashScreenState extends State<SplashScreen> {
     ///
     /// Setting Message Notification from firebase to user
     ///
-   // _messaging.getToken().then((token) {
-     // print(token);
+    // _messaging.getToken().then((token) {
+    // print(token);
     //});
 
     @override
@@ -124,7 +124,7 @@ class _SplashScreenState extends State<SplashScreen> {
   bool loggedIn = false;
 
   @override
-    SharedPreferences prefs;
+  SharedPreferences prefs;
 
   ///
   /// Checking user is logged in or not logged in
@@ -159,120 +159,120 @@ class _SplashScreenState extends State<SplashScreen> {
           .collection("users")
           .doc(currentUser.uid)
           .get()
-          .then((DocumentSnapshot result) 
-
-          {
-            currentUserModel =  UserModel(name:result['name'],city:result ['city'],
-   country:result['country'],email:result['email'],password:result['password'],
-   photoProfile:result['photoProfile'],uid:result['uid']);
-            return
-           Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => BottomNavBar(pageIndex: 0,
-                        idUser: currentUser.uid,
-                      )));}
-                      )
-          .catchError((err) => print(err));
-          
+          .then((DocumentSnapshot result) {
+        currentUserModel = UserModel(
+            name: result['name'],
+            city: result['city'],
+            country: result['country'],
+            email: result['email'],
+            password: result['password'],
+            photoProfile: result['photoProfile'],
+            uid: result['uid']);
+        return Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+                builder: (context) => BottomNavBar(
+                      pageIndex: 0,
+                      idUser: currentUser.uid,
+                    )));
+      }).catchError((err) => print(err));
     }
   }
 
+  /// Code Create UI Splash Screen
+  Widget build(BuildContext context) {
+    ///
+    /// Check connectivity
+    ///
+    return _connection
 
-/// Code Create UI Splash Screen
-Widget build(BuildContext context) {
-  ///
-  /// Check connectivity
-  ///
-  return _connection
-
-      ///
-      /// Layout if user not connect internet
-      ///
-      ? Scaffold(
-          backgroundColor: Colors.white,
-          body: Column(
-            children: <Widget>[
-              SizedBox(
-                height: 150.0,
-              ),
-              Container(
-                height: 270.0,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/image/noInternet.png")),
+        ///
+        /// Layout if user not connect internet
+        ///
+        ? Scaffold(
+            backgroundColor: Colors.white,
+            body: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 150.0,
                 ),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              Text(
-                "No Connection",
-                style: TextStyle(
-                    fontSize: 25.0,
-                    fontFamily: "Sofia",
-                    letterSpacing: 1.1,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.deepPurpleAccent),
-              ),
-              SizedBox(
-                height: 15.0,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 25.0, right: 25.0),
-                child: Text(
-                  "No internet connection found. Check your connection or try again",
-                  style: TextStyle(
-                    fontSize: 17.0,
-                    fontFamily: "Sofia",
+                Container(
+                  height: 270.0,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("assets/image/noInternet.png")),
                   ),
-                  textAlign: TextAlign.center,
                 ),
-              )
-            ],
-          ),
-        )
-      :
+                SizedBox(
+                  height: 20.0,
+                ),
+                Text(
+                  "No Connection",
+                  style: TextStyle(
+                      fontSize: 25.0,
+                      fontFamily: "Sofia",
+                      letterSpacing: 1.1,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.deepPurpleAccent),
+                ),
+                SizedBox(
+                  height: 15.0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+                  child: Text(
+                    "No internet connection found. Check your connection or try again",
+                    style: TextStyle(
+                      fontSize: 17.0,
+                      fontFamily: "Sofia",
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                )
+              ],
+            ),
+          )
+        :
 
-      ///
-      /// Layout if user connect internet
-      ///
+        ///
+        /// Layout if user connect internet
+        ///
 
-      Scaffold(
-          backgroundColor: Colors.white,
-          body: Container(
-            child: Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(
-                        "assets/image/cover.png",
+        Scaffold(
+            backgroundColor: Colors.white,
+            body: Container(
+              child: Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(
+                          "assets/image/logo1.jpg",
+                        ),
+                        fit: BoxFit.cover)),
+                child: Center(
+                  child: SingleChildScrollView(
+                    child: Container(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Yalla!Activities",
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w200,
+                              fontSize: 36.0,
+                              letterSpacing: 1.5,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
                       ),
-                      fit: BoxFit.cover)),
-              child: Center(
-                child: SingleChildScrollView(
-                  child: Container(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          "Yalla!Activities",
-                          style: TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w200,
-                            fontSize: 36.0,
-                            letterSpacing: 1.5,
-                            color: Colors.white,
-                          ),
-                        )
-                      ],
                     ),
                   ),
                 ),
               ),
             ),
-          ),
-        );
-  // hello
-}
+          );
+    // hello
+  }
 }

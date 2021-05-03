@@ -18,7 +18,7 @@ var _fontHeaderStyle = TextStyle(
 var _fontDescriptionStyle = TextStyle(
     fontFamily: "Sans",
     fontSize: 17.0,
-    color: Colors.black26,
+    color: Colors.purple,
     fontWeight: FontWeight.w300);
 
 ///
@@ -30,18 +30,16 @@ final pages = [
       iconColor: Colors.black,
       bubbleBackgroundColor: Colors.black,
       title: Text(
-        'Schedule',
+        'Hello, \n Welcome! ',
         style: _fontHeaderStyle,
       ),
       body: Container(
         height: 500.0,
-        child: Text(
-            'Lorem Ipsum is simply  dummy color\ntext of  the printing and color\ntypesetting industry color.',
-            textAlign: TextAlign.center,
-            style: _fontDescriptionStyle),
+        child: Text('Yalla Activities!',
+            textAlign: TextAlign.center, style: _fontDescriptionStyle),
       ),
       mainImage: Image.asset(
-        'assets/image/onBoarding1.png',
+        'assets/image/logo1.jpg',
         height: 355.0,
         width: 355.0,
         alignment: Alignment.center,
@@ -51,43 +49,18 @@ final pages = [
       iconColor: Colors.black,
       bubbleBackgroundColor: Colors.black,
       title: Text(
-        'Learning',
+        'Events!',
         style: _fontHeaderStyle,
       ),
       body: Container(
         height: 250.0,
         child: Text(
-            'Lorem Ipsum is simply  dummy color\ntext of  the printing and color\ntypesetting industry color.',
+            "Can make you feel at your best and forget about anything else.",
             textAlign: TextAlign.center,
             style: _fontDescriptionStyle),
       ),
-      mainImage: Image.asset(
-        'assets/image/onBoarding2.png',
-        height: 285.0,
-        width: 285.0,
-        alignment: Alignment.center,
-      )),
-  new PageViewModel(
-      pageColor: Colors.white,
-      iconColor: Colors.black,
-      bubbleBackgroundColor: Colors.black,
-      title: Text(
-        'Convertation',
-        style: _fontHeaderStyle,
-      ),
-      body: Container(
-        height: 250.0,
-        child: Text(
-            'Lorem Ipsum is simply  dummy color\ntext of  the printing and color\ntypesetting industry color.',
-            textAlign: TextAlign.center,
-            style: _fontDescriptionStyle),
-      ),
-      mainImage: Image.asset(
-        'assets/image/onBoarding3.png',
-        height: 285.0,
-        width: 285.0,
-        alignment: Alignment.center,
-      )),
+      mainImage: Image.asset('assets/image/backg.jpg',
+          height: 4000.0, width: 3000.0, alignment: Alignment.topCenter)),
 ];
 
 class _onBoardingState extends State<onBoarding> {

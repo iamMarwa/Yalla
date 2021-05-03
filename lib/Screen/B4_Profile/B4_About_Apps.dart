@@ -24,12 +24,13 @@ class _aboutAppsState extends State<aboutApps> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple[400],
         title: Text(
           "About Application",
           style: TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 15.0,
-              color: Colors.black54,
+              color: Colors.orange[700],
               fontFamily: "Gotik"),
         ),
         centerTitle: true,
@@ -58,7 +59,7 @@ class _aboutAppsState extends State<aboutApps> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            "Event Country",
+                            "Yalla Activities!",
                             style: _txtCustomSub.copyWith(
                                 fontWeight: FontWeight.w600),
                           ),
@@ -78,12 +79,7 @@ class _aboutAppsState extends State<aboutApps> {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the "
-                  "industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
-                  "scrambled it to make a type specimen book. \n\n\n It has survived not only five centuries, but also "
-                  "the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the "
-                  "1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with "
-                  "desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                  "Yalla Activities is an application that helps you find fun and amazing events nearby. You can easily search and find the events that suits you. All the events information is available on the event page. It is a places where everyone can have fun.",
                   style: _txtCustomSub,
                   textAlign: TextAlign.justify,
                 ),

@@ -125,7 +125,7 @@ class _ChoseLoginState extends State<ChoseLogin> with TickerProviderStateMixin {
                                   child: Hero(
                                     tag: "Event",
                                     child: Text(
-                                      "Event Country",
+                                      "Best Events",
                                       style: TextStyle(
                                         fontFamily: 'Sans',
                                         fontWeight: FontWeight.w900,
@@ -147,7 +147,7 @@ class _ChoseLoginState extends State<ChoseLogin> with TickerProviderStateMixin {
                                       height: 0.5,
                                     )),
                                 Text(
-                                  "Life  is only once, Enjoy your life! ",
+                                  "You only live once, Enjoy your life! ",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 17.0,

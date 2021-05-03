@@ -106,6 +106,7 @@ class _updateProfileState extends State<updateProfile> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.purple[400],
         leading: InkWell(
             onTap: () {
               Navigator.pop(context);
@@ -116,6 +117,7 @@ class _updateProfileState extends State<updateProfile> {
             style: TextStyle(
               fontFamily: "Poppins",
               fontSize: 17.0,
+              color: Colors.orange[700],
             )),
         centerTitle: true,
       ),

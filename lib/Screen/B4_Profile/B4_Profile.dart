@@ -215,13 +215,16 @@ class _profileState extends State<profile> {
                               if (!snapshot.hasData) {
                                 return Container();
                               }
-                              if (snapshot.data['email'] == userDocument["email"]) {
+                              if (snapshot.data['email'] ==
+                                  userDocument["email"]) {
                                 return IconButton(
                                     icon: Icon(Icons.add_circle_outlined,
                                         size: 30, color: Colors.white),
                                     onPressed: () {
-                                      Navigator.of(context).push(PageRouteBuilder(
-                                          pageBuilder: (_, __, ___) => new AddEvent()));
+                                      Navigator.of(context).push(
+                                          PageRouteBuilder(
+                                              pageBuilder: (_, __, ___) =>
+                                                  new AddEvent()));
                                     });
                               }
                               return Container();
@@ -271,8 +274,7 @@ class _profileState extends State<profile> {
                   height: 260.0,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image:
-                              AssetImage("assets/image/backgroundBanner.png"),
+                          image: AssetImage("assets/image/userpage1.jpg"),
                           fit: BoxFit.cover)),
                 ),
                 Padding(

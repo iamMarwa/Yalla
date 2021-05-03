@@ -31,9 +31,17 @@ class _callCenterState extends State<callCenter> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple[400],
         centerTitle: true,
         elevation: 0.0,
-        title: Text("Call Center"),
+        title: Text(
+          "Call Center",
+          style: TextStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: 15.0,
+              color: Colors.orange[700],
+              fontFamily: "Gotik"),
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.only(right: 12.0, left: 12.0, top: 15.0),

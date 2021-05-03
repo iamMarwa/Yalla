@@ -212,7 +212,7 @@ class _loginState extends State<login> {
                                           ///
                                           validator: (input) {
                                             if (input.isEmpty) {
-                                              return 'Please typle an email';
+                                              return 'Please type in an email';
                                             }
                                           },
                                           onSaved: (input) => _email = input,
@@ -252,7 +252,7 @@ class _loginState extends State<login> {
                                         TextFormField(
                                           validator: (input) {
                                             if (input.isEmpty) {
-                                              return 'Please type an password';
+                                              return 'Please type in a password';
                                             }
                                           },
                                           onSaved: (input) => _pass = input,

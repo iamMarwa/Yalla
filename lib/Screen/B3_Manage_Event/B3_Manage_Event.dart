@@ -56,14 +56,16 @@ class _favoriteState extends State<favorite> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple[400],
         centerTitle: false,
         elevation: 0.0,
         title: Padding(
           padding: const EdgeInsets.only(top: 15.0),
           child: Text(
-            "Manage Event",
+            "My Events",
             style: TextStyle(
               fontFamily: "Popins",
+              color: Colors.orange[700],
               letterSpacing: 1.5,
               fontWeight: FontWeight.w700,
               fontSize: 24.0,
