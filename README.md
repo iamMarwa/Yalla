@@ -1,18 +1,7 @@
-# yalla_activities
+# Yalla! Activities 
 
-A new Flutter project.
+An application using Flutter with Dart.
 
-## Getting Started
+- The application provides a new comprehensive application that includes all the activities and events that being held in a specific city at a particular time.
+- Booking can be made directly online on the app.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# Yalla-Activities
-# yalla2
